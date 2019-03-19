@@ -1,0 +1,14 @@
+---
+- name: Harden the image
+  hosts: all
+  gather_facts: true
+  become: true
+
+  roles:
+   - dev-sec.os-hardening
+   - dev-sec.ssh-hardening
+
+  vars:
+    ssh_use_pam: true # to allow access with our key on ec2
+    ssh_allow_tcp_forwarding: true
+    sftp_enabled: true

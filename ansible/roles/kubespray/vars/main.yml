@@ -1,0 +1,3 @@
+---
+kubespray_url: ../requirements.txt
+kubespray_tmp: /tmp/requirements.txt

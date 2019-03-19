@@ -1,0 +1,19 @@
+---
+- name: Enable forwarding
+  sysctl: name="net.ipv4.ip_forward" value=1 sysctl_set=yes state=present reload=yes
+
+- name: Install pip
+  yum:
+    name: python-pip
+    update_cache: yes
+    state: present
+
+- name: Copy kubespray requirements file
+  copy:
+    src: "{{ kubespray_url }}"
+    dest: "{{ kubespray_tmp }}"
+    mode: 0644
+
+- name: Installing python libraries using kubespray-requirements file
+  pip:
+    requirements: "{{ kubespray_tmp }}"

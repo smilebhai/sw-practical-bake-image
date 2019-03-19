@@ -1,0 +1,14 @@
+---
+- name: Install Jenkins
+  hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: true
+
+  roles:
+   - geerlingguy.jenkins
+   - geerlingguy.ansible-role-packer
+   - geerlingguy.ansible
+   - geerlingguy.docker
+   - geerlingguy.git
