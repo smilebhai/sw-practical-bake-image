@@ -16,7 +16,7 @@ Import into AWS using this command or manually import from AWS EC2 console
 
     $ aws ec2 import-key-pair --key-name "packer_base_id_rsa" --region us-east-1 --public-key-material "$(cat ./../ssh-keys/packer_base_id_rsa.pub)"
 
-`NOTE`: Make sure to change the aws profile as well as `--region` and `--key-name` accordingly.
+    `NOTE`: Make sure to change the aws profile as well as `--region` and `--key-name` accordingly.
 
 Validate the syntax and configuration of a template
 
