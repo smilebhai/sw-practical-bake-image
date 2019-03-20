@@ -16,25 +16,25 @@ Import into AWS using this command or manually import from AWS EC2 console
 
     $ aws ec2 import-key-pair --key-name "packer_base_id_rsa" --region us-east-1 --public-key-material "$(cat ./../ssh-keys/packer_base_id_rsa.pub)"
 
-    `NOTE`: Make sure to change the aws profile as well as `--region` and `--key-name` accordingly.
+`NOTE`: Make sure to change the aws profile as well as `--region` and `--key-name` accordingly.
 
 Validate the syntax and configuration of a template
 
-  $ packer validate my-packer-template.json
+    $ packer validate my-packer-template.json
 
 Takes a template and runs all the builds within it in order to generate a set of artifacts.
 
-  $ packer build template.json
+    $ packer build template.json
 
 ## Ansible
 
 Dry run and debug
 
-  $ ansible-playbook my-ansible-playbook.yml --check
-
+    $ ansible-playbook my-ansible-playbook.yml --check
+    
 Run the playbook
 
-  $ ansible-playbook my-ansible-playbook.yml
+    $ ansible-playbook my-ansible-playbook.yml
 
 ## Resources
 
