@@ -8,7 +8,7 @@ Utilize Packer and Ansible to automate the creation of Centos 7 AWS AMI images (
 
 ## Packer
 
-Generate new keypair for AWS if one does not already exists
+Generate new keypair for AWS if one does not already exist
 
     $ ssh-keygen -t rsa -C "packer_base_id_rsa" -f ./../ssh-keys/packer_base_id_rsa
 
@@ -31,7 +31,7 @@ Takes a template and runs all the builds within it in order to generate a set of
 Dry run and debug
 
     $ ansible-playbook my-ansible-playbook.yml --check
-    
+
 Run the playbook
 
     $ ansible-playbook my-ansible-playbook.yml
